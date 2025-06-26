@@ -85,7 +85,7 @@ streamlit run app.py
 
 **Yuqing Guo**  
 MSc Business Analytics Management  
-607267
+Email:607267yg@eur.nl
 
 
 ---
