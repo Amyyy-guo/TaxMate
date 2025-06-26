@@ -50,7 +50,7 @@
 > 🔐 Simulated Belastingdienst Login  
 > 🤖 Floating AI Chat Assistant  
 > 📤 Document Upload for Expert Review
-https://github.com/Amyyy-guo/TaxMate/blob/fb4e3e4316e4bccc436d5c37fe8bf57379fe4883/Income.png
+![Tax info](https://github.com/Amyyy-guo/TaxMate/blob/fb4e3e4316e4bccc436d5c37fe8bf57379fe4883/Income.png)
 ---
 
 ## 🧪 How to Run Locally
