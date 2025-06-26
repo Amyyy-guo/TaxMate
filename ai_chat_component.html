@@ -1,0 +1,60 @@
+
+<style>
+#chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+}
+</style>
+
+<button id="chat-toggle">🤖</button>
+<div id="chat-box" style="display:none;">
+  <strong>🤖 Ask TaxMate AI</strong><br>
+  <input type="text" id="user-input" placeholder="Ask me anything..." style="width: 100%; margin-top: 6px;"><br>
+  <div id="response" style="margin-top: 10px; font-size: 13px; color: #333;"></div>
+</div>
+
+<script>
+const toggle = document.getElementById("chat-toggle");
+const box = document.getElementById("chat-box");
+toggle.onclick = () => {
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+};
+document.getElementById("user-input").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    const val = e.target.value.toLowerCase();
+    let resp = "Sorry, I didn’t understand that.";
+    if (val.includes("zzp") && val.includes("deduction")) {
+      resp = "If you worked 1225+ hours in a year, you're eligible for zelfstandigenaftrek (~€5000 deduction).";
+    } else if (val.includes("vat")) {
+      resp = "Standard VAT rate is 21%. You may be able to deduct some VAT on business expenses.";
+    }
+    document.getElementById("response").innerText = "🧠 " + resp;
+  }
+});
+</script>
